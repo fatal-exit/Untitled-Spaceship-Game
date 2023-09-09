@@ -1,7 +1,6 @@
 def tick args
   
   #default values
-  args.state.tick_count ||= 0
   args.state.game_start_tick ||= 0
   args.state.second_count ||= 0
   args.state.fire_start_tick ||= 0
@@ -686,7 +685,7 @@ def reset_game(args, screen_width, screen_height)
   
   args.state.score = 0
   args.state.second_count = 0
-  args.state.second_count_fixed = 0
+  args.state.second_count_fixed = -1
   args.state.previous_second_count = 0
   args.state.enemy_spawn_tick =  0
   args.state.enemy_spawn_interval= 150  # 2.5 seconds * 60 frames/second
